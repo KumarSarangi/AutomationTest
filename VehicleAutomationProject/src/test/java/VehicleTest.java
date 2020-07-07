@@ -31,7 +31,7 @@ public class VehicleTest {
 
 		for (String file : listOfFiles) {
 
-			FileReader fr = new FileReader(localDir+"//InputData//"+file); 
+			FileReader fr = new FileReader(localDir+"//InputData//"+file); // Reading Input File
 
 			BufferedReader br = new BufferedReader(fr); 
 
@@ -46,7 +46,7 @@ public class VehicleTest {
 
 				for(int i = 0; i< words.length; i++){		
 
-					if(Pattern.matches("^[A-Z]{2}\\d{2}.*", words[i])){
+					if(Pattern.matches("^[A-Z]{2}\\d{2}.*", words[i])){  // Extracting Vehicle Registration Number from Input Files
 
 						if(words[i].length() == 7)
 
@@ -136,7 +136,7 @@ public class VehicleTest {
 		}
 	}	
 	
-    // Reading Output Data From File and Validating the response.
+        // Validating Response with Output File
 	
 	public static Map<String,CarPropertiesBean> getOutPutData() throws Exception{
 
